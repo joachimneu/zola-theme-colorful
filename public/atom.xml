@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>Zola &#x27;Colorful&#x27; Theme Demo</title>
-    <link href="https://raw.githubusercontent.com/joachimneu/zola-theme-colorful/main/public/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="https://raw.githubusercontent.com/joachimneu/zola-theme-colorful/main/public"/>
+    <link href="https://joachimneu.github.io/zola-theme-colorful/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://joachimneu.github.io/zola-theme-colorful"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>1970-01-02T00:00:00+00:00</updated>
-    <id>https://raw.githubusercontent.com/joachimneu/zola-theme-colorful/main/public/atom.xml</id>
+    <id>https://joachimneu.github.io/zola-theme-colorful/atom.xml</id>
     <entry xml:lang="en">
         <title>Second Blog Post</title>
         <published>1970-01-02T00:00:00+00:00</published>
@@ -13,10 +13,10 @@
         
           
           <author><name>John Doe</name>
-            <uri>https://raw.githubusercontent.com/joachimneu/zola-theme-colorful/main/public/</uri></author>
+            <uri>https://joachimneu.github.io/zola-theme-colorful/</uri></author>
           
-        <link rel="alternate" href="https://raw.githubusercontent.com/joachimneu/zola-theme-colorful/main/public/blog/second-post/" type="text/html"/>
-        <id>https://raw.githubusercontent.com/joachimneu/zola-theme-colorful/main/public/blog/second-post/</id>
+        <link rel="alternate" href="https://joachimneu.github.io/zola-theme-colorful/blog/second-post/" type="text/html"/>
+        <id>https://joachimneu.github.io/zola-theme-colorful/blog/second-post/</id>
         
         <content type="html">&lt;h2 id=&quot;lorem-ipsum&quot;&gt;Lorem Ipsum&lt;&#x2F;h2&gt;
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur erat tortor, rutrum at volutpat eget, maximus sed velit. Ut ut consequat nisl, ut laoreet dui. Pellentesque et luctus lorem, sit amet auctor sapien. Aliquam ut risus ut lacus rhoncus tempor. Sed eget ante ac dolor elementum dapibus ac pulvinar massa. Sed elementum ex in lacus tristique tristique. Integer aliquam imperdiet libero at consequat. Morbi tincidunt vel enim a scelerisque. &lt;&#x2F;p&gt;
@@ -35,10 +35,10 @@
         
           
           <author><name>John Doe</name>
-            <uri>https://raw.githubusercontent.com/joachimneu/zola-theme-colorful/main/public/</uri></author>
+            <uri>https://joachimneu.github.io/zola-theme-colorful/</uri></author>
           
-        <link rel="alternate" href="https://raw.githubusercontent.com/joachimneu/zola-theme-colorful/main/public/blog/first-post/" type="text/html"/>
-        <id>https://raw.githubusercontent.com/joachimneu/zola-theme-colorful/main/public/blog/first-post/</id>
+        <link rel="alternate" href="https://joachimneu.github.io/zola-theme-colorful/blog/first-post/" type="text/html"/>
+        <id>https://joachimneu.github.io/zola-theme-colorful/blog/first-post/</id>
         
         <content type="html">&lt;h2 id=&quot;lorem-ipsum&quot;&gt;Lorem Ipsum&lt;&#x2F;h2&gt;
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur erat tortor, rutrum at volutpat eget, maximus sed velit. Ut ut consequat nisl, ut laoreet dui. Pellentesque et luctus lorem, sit amet auctor sapien. Aliquam ut risus ut lacus rhoncus tempor. Sed eget ante ac dolor elementum dapibus ac pulvinar massa. Sed elementum ex in lacus tristique tristique. Integer aliquam imperdiet libero at consequat. Morbi tincidunt vel enim a scelerisque. &lt;&#x2F;p&gt;

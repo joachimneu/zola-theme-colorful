@@ -1,4 +1,4 @@
-base_url = "https://raw.githubusercontent.com/joachimneu/zola-theme-colorful/main/public"
+base_url = "https://joachimneu.github.io/zola-theme-colorful"
 title = "Zola 'Colorful' Theme Demo"
 
 compile_sass = true
