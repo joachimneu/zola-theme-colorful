@@ -4,6 +4,7 @@
 
 For an example of "Colorful" used in production, see: [https://www.jneu.net/](https://www.jneu.net/)
 
+Check out the [demo site](https://joachimneu.github.io/zola-theme-colorful):
 !["Colorful" screenshot](screenshot.png)
 
 
