@@ -1,0 +1,21 @@
+{% macro head_meta(title, description="", cover_img="") %}
+<title>{{ title }}</title>
+<meta name="title" content="{{ title }}">
+{% if description %}
+<meta name="description" content="{{ description }}">{% endif %}
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="{{ config.title }}">
+<meta property="og:url" content="{{ current_url | safe }}">
+<meta property="og:title" content="{{ title }}">
+{% if description %}
+<meta property="og:description" content="{{ description }}">{% endif %}
+{% if cover_img %}
+<meta property="og:image" content="{{ cover_img | safe }}">{% endif %}
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="{{ current_url | safe }}">
+<meta property="twitter:title" content="{{ title }}">
+{% if description %}
+<meta property="twitter:description" content="{{ description }}">{% endif %}
+{% if cover_img %}
+<meta property="twitter:image" content="{{ cover_img | safe }}">{% endif %}
+{% endmacro head_meta %}

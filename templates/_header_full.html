@@ -1,0 +1,18 @@
+{% extends "_base.html" %}
+
+{% block preamble %}
+<div class="bg-highlighted">
+    <div id="preamble" class="container-lg pt-3">
+        <div class="row justify-content-center">
+            <div class="col col-xl-10 col-xxl-9">
+                <img src="{{ get_url(path='img/profilepic.png') }}" alt="Profile picture"
+                    style="float: right; height: 200px;" class="mb-3 ms-3">
+                <h1>{{ config.extra.colorful_name_first }} {{ config.extra.colorful_name_last }}</h1>
+                {% include "_frag_preamble_post_name.html" ignore missing %}
+                {% include "_frag_preamble_icons.html" ignore missing %}
+                {% include "_frag_preamble_post_icons.html" ignore missing %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

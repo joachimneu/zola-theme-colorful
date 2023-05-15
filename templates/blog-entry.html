@@ -1,0 +1,98 @@
+{% extends "_header_condensed.html" %}
+{% import "_macros.html" as macros %}
+
+
+{% block head_meta_content %}
+{{ macros::head_meta(title=page.title ~ " · Blog · " ~ config.title, description=page.description) }}
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="{{ page.date | date(format='%+') }}">
+<meta property="article:modified_time" content="{{ page.date | date(format='%+') }}">
+{% for author in page.authors -%}
+{%- if author is containing("|||") -%}
+<meta property="article:author" content="{{ author | split(pat='|||') | nth(n=1) | safe }}">
+{% elif author == config.extra.colorful_name_first ~ " " ~ config.extra.colorful_name_last %}
+<meta property="article:author" content="{{ get_url(path='@/_index.md') | safe }}">
+{%- endif -%}
+{%- endfor %}
+<meta name="author"
+    content="{% for author in page.authors -%}{%- if not loop.first %}, {% endif -%}{{ author | split(pat='|||') | nth(n=0) }}{%- endfor %}">
+{% endblock %}
+
+
+{% block content %}
+{% set section_blog = get_section(path=page.ancestors | last, metadata_only=true) %}
+<a href="{{ section_blog.permalink | safe }}" class="to-blog-index"><span class="bi bi-arrow-left"></span>Back to blog
+    index</a>
+
+<h1>{{ page.title | markdown(inline=true) | safe }}</h1>
+<p class="lead">
+    by
+    {% for author in page.authors -%}
+    {%- if not loop.first %}, {% endif -%}
+    {%- if author is containing("|||") -%}
+    <a href="{{ author | split(pat='|||') | nth(n=1) | safe }}">{{ author | split(pat='|||') | nth(n=0) }}</a>
+    {%- else -%}{{ author }}{%- endif -%}
+    {%- endfor %}
+    on
+    {{ page.date | date(format="%B %-d, %Y") }}
+</p>
+
+{% if page.extra.show_toc and page.toc %}
+<div class="p-2 pb-3 mb-3 toc float-md-end p-md-4 p-lg-5 ms-md-4 mb-md-4">
+    <h2>Contents</h2>
+    <ol>
+        {% for h1 in page.toc %}
+        <li>
+            <a href="{{ h1.permalink | safe }}">{{ h1.title }}</a>
+            {% if h1.children %}
+            <ul>
+                {% for h2 in h1.children %}
+                <li>
+                    <a href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ol>
+</div>
+{% endif %}
+
+<div class="entry-content">
+    {{ page.content | safe }}
+</div>
+{% endblock %}
+
+
+{% block add_before_end_head %}
+{{ super() }}
+<style>
+    a.to-blog-index {
+        display: block;
+        text-align: left;
+        font-size: 0.8em;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    a.to-blog-index span {
+        margin-right: 0.5em;
+    }
+
+    div.toc {
+        background-color: #eeeeee;
+    }
+
+    div.toc ul,
+    div.toc ol {
+        padding-left: 1.25em;
+        margin-bottom: 0px;
+    }
+
+    div.entry-content img {
+        display: block;
+        width: 100%;
+    }
+</style>
+{% endblock %}

@@ -1,0 +1,30 @@
+name = "Colorful"
+description = "A colorful portfolio/blog theme using Bootstrap"
+homepage = "https://github.com/joachimneu/zola-theme-colorful"
+min_version = "0.17.2"
+demo = "https://raw.githubusercontent.com/joachimneu/zola-theme-colorful/main/public"
+
+
+[extra]
+colorful_color_headerbg_hex = "#0000c0"
+colorful_navigation_sections = ['_index.md', 'blog/_index.md']
+colorful_name_first = "John"
+colorful_name_last = "Doe"
+colorful_email_user = "john"
+colorful_email_domain = "doe.me"
+colorful_googlescholar_label = "Google Scholar"
+colorful_googlescholar_url = "https://scholar.google.com/"
+colorful_dblp_label = "dblp - computer science bibliography"
+colorful_dblp_url = "https://dblp.org/"
+colorful_orcid_label = "ORCiD"
+colorful_orcid_url = "https://orcid.org/"
+colorful_twitter_label = "Twitter"
+colorful_twitter_url = "https://twitter.com/"
+colorful_school_icon = "img/logo_exampleschool.png"
+colorful_school_label = "Example School"
+colorful_school_url = "http://example.edu/"
+
+
+[author]
+name = "Joachim Neu"
+homepage = "https://www.jneu.net/"

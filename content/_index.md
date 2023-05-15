@@ -1,13 +1,18 @@
-# Zola "Colorful" Theme Demo
++++
+title = "Home"
+sort_by = "date"
++++
 
-["Colorful"](https://github.com/joachimneu/zola-theme-colorful) is a colorful theme to build a simple personal portfolio and blog using the [Zola static site generator](https://www.getzola.org/). Under the hood, "Colorful" uses [Bootstrap](https://getbootstrap.com/).
+## Zola "Colorful" Theme Demo
+
+Welcome to the demo site of the ["Colorful" theme](https://github.com/joachimneu/zola-theme-colorful) for the [Zola static site generator](https://www.getzola.org/).
+
+"Colorful" is a colorful theme for a simple personal portfolio and blog. Under the hood, "Colorful" uses [Bootstrap](https://getbootstrap.com/).
 
 For an example of "Colorful" used in production, see: [https://www.jneu.net/](https://www.jneu.net/)
 
-!["Colorful" screenshot](screenshot.png)
 
-
-## Installation
+### Installation
 
 1. Download this theme to the `themes` directory of your Zola site:
     ```bash
@@ -20,14 +25,14 @@ For an example of "Colorful" used in production, see: [https://www.jneu.net/](ht
     ```
 
 
-## Customization
+### Customization
 
-### Pronunciation and Bio
+#### Pronunciation and Bio
 
 To set (or remove) pronunciation and bio in the colorful header, override `templates/_frag_preamble_post_name.html` and `templates/_frag_preamble_post_icons.html` in your Zola site.
 
 
-### Basic Setup
+#### Basic Setup
 
 To configure the theme's color, the sections of the navigation, and basic author information, set the following variables appropriately in `config.toml` of your Zola site:
 ```toml
@@ -41,12 +46,12 @@ colorful_email_domain = "doe.me"
 ```
 
 
-### Profile Picture
+#### Profile Picture
 
 To use your own profile picture, override `static/img/favicon.png` and `static/img/profilepic.png` in your Zola site.
 
 
-### Icons
+#### Icons
 
 To configure your profiles for the different icons in the header (leave `..._url` empty to hide the icon), set the following variables appropriately in `config.toml` of your Zola site:
 ```toml

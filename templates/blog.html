@@ -1,0 +1,73 @@
+{% extends "_header_condensed.html" %}
+{% import "_macros.html" as macros %}
+
+
+{% block head_meta_content %}
+{{ macros::head_meta(title="Blog · " ~ config.title) }}
+{% endblock %}
+
+
+{% block content %}
+{{ section.content | safe }}
+
+{% for page in section.pages %}
+<a href="{{ page.permalink | safe }}" class="entry-content">
+    <h2>{{ page.title | markdown(inline=true) | safe }}</h2>
+    <p class="lead">{{ page.description | markdown(inline=true) | safe }} <span class="read-more"><span
+                class="bi bi-arrow-right"></span>More</span>
+    </p>
+</a>
+<p class="entry-meta">
+    by
+    {% for author in page.authors -%}
+    {%- if not loop.first %}, {% endif -%}
+    {%- if author is containing("|||") -%}
+    <a href="{{ author | split(pat='|||') | nth(n=1) | safe }}">{{ author | split(pat='|||') | nth(n=0) }}</a>
+    {%- else -%}{{ author }}{%- endif -%}
+    {%- endfor %}
+    on
+    {{ page.date | date(format="%B %-d, %Y") }}
+</p>
+{% endfor %}
+{% endblock %}
+
+
+{% block add_before_end_head %}
+{{ super() }}
+<style>
+    a.entry-content {
+        text-decoration: none;
+    }
+
+    a.entry-content p,
+    a.entry-content h2 {
+        margin-bottom: 0px;
+        color: #000000;
+    }
+
+    a.entry-content p.lead {
+        line-height: 1.15em;
+    }
+
+    p.entry-meta {
+        font-style: italic;
+    }
+
+    a.entry-content p.lead span.read-more {
+        display: inline-block;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        text-decoration: underline;
+        color: var(--bs-link-color);
+    }
+
+    a.entry-content:hover p.lead span.read-more {
+        color: var(--bs-link-hover-color);
+    }
+
+    a.entry-content p.lead span.read-more span {
+        margin-right: 0.5em;
+        margin-left: 0.5em;
+    }
+</style>
+{% endblock %}

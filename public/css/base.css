@@ -1,0 +1,72 @@
+:root {
+    --bs-font-sans-serif: 'Source Sans Pro', 'Noto Color Emoji', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: 'Source Code Pro', 'Noto Color Emoji', SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-link-color: #006CB8;
+    --bs-link-color-rgb: 0, 108, 184;
+    --bs-link-hover-color: #00548f;
+    --bs-link-hover-color-rgb: 0, 84, 143;
+}
+
+tt {
+    font-family: var(--bs-font-monospace);
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+}
+
+div.bg-highlighted {
+    background-color: var(--colorful-headerbg);
+    color: #ffffff;
+}
+
+
+a.scroll-to {
+    display: block;
+    text-align: center;
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+
+a.scroll-to span {
+    margin-left: 0.5em;
+}
+
+
+#preamble a {
+    color: #ffffff;
+}
+
+#contact a {
+    font-family: var(--bs-font-monospace);
+}
+
+#icons_container img {
+    height: 26px;
+}
+
+
+#navigation a {
+    font-variant: small-caps;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.25em;
+    font-weight: 700;
+}
+
+#navigation a.active,
+#navigation a:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+#footer p {
+    color: #cccccc;
+}
+
+#footer p a {
+    color: #cccccc;
+}

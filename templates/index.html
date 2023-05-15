@@ -1,0 +1,15 @@
+{% extends "_header_full.html" %}
+{% import "_macros.html" as macros %}
+
+
+{% block head_meta_content %}
+{{ macros::head_meta(title=config.title, description="", cover_img=get_url(path="img/profilepic.png")) }}
+<meta property="og:type" content="profile">
+<meta property="profile:first_name" content="{{ config.extra.colorful_name_first }}">
+<meta property="profile:last_name" content="{{ config.extra.colorful_name_last }}">
+{% endblock %}
+
+
+{% block content %}
+{{ section.content | safe }}
+{% endblock %}

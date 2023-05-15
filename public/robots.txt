@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Allow: /
+Sitemap: https://raw.githubusercontent.com/joachimneu/zola-theme-colorful/main/public/sitemap.xml

@@ -1,0 +1,32 @@
+<p id="contact_container"><i>Contact:</i> <span id="contact">user <code>{{ config.extra.colorful_email_user }}</code> at
+        domain
+        <code>{{ config.extra.colorful_email_domain }}</code></span>
+</p>
+<p id="icons_container">
+    {% if config.extra.colorful_googlescholar_url is defined and config.extra.colorful_googlescholar_url != "" %}
+    <a href="{{ config.extra.colorful_googlescholar_url | safe }}" data-bs-toggle="tooltip"
+        data-bs-title="{{ config.extra.colorful_googlescholar_label }}"><img
+            src="{{ get_url(path='img/logo_googlescholar.png') }}" alt="Google Scholar icon"></a> ·
+    {% endif %}
+    {% if config.extra.colorful_dblp_url is defined and config.extra.colorful_dblp_url != "" %}
+    <a href="{{ config.extra.colorful_dblp_url | safe }}" data-bs-toggle="tooltip"
+        data-bs-title="{{ config.extra.colorful_dblp_label }}"><img src="{{ get_url(path='img/logo_dblp.png') }}"
+            alt="dblp icon"></a> ·
+    {% endif %}
+    {% if config.extra.colorful_school_url is defined and config.extra.colorful_school_url != "" %}
+    <a href="{{ config.extra.colorful_school_url | safe }}" data-bs-toggle="tooltip"
+        data-bs-title="{{ config.extra.colorful_school_label }}"><img
+            src="{{ get_url(path=config.extra.colorful_school_icon) }}"
+            alt="{{ config.extra.colorful_school_label }} icon"></a> ·
+    {% endif %}
+    {% if config.extra.colorful_orcid_url is defined and config.extra.colorful_orcid_url != "" %}
+    <a href="{{ config.extra.colorful_orcid_url | safe }}" data-bs-toggle="tooltip"
+        data-bs-title="{{ config.extra.colorful_orcid_label }}"><img src="{{ get_url(path='img/logo_orcid.png') }}"
+            alt="ORCiD icon"></a> ·
+    {% endif %}
+    {% if config.extra.colorful_twitter_url is defined and config.extra.colorful_twitter_url != "" %}
+    <a href="{{ config.extra.colorful_twitter_url | safe }}" data-bs-toggle="tooltip"
+        data-bs-title="{{ config.extra.colorful_twitter_label }}"><img src="{{ get_url(path='img/logo_twitter.png') }}"
+            alt="Twitter icon"></a>
+    {% endif %}
+</p>
