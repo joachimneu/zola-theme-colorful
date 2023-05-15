@@ -1,8 +1,8 @@
-name = "Colorful"
+name = "colorful"
 description = "A colorful portfolio/blog theme using Bootstrap"
 homepage = "https://github.com/joachimneu/zola-theme-colorful"
 min_version = "0.17.2"
-demo = "https://raw.githubusercontent.com/joachimneu/zola-theme-colorful/main/public"
+demo = "https://joachimneu.github.io/zola-theme-colorful"
 
 
 [extra]

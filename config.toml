@@ -1,6 +1,9 @@
 base_url = "https://joachimneu.github.io/zola-theme-colorful"
 title = "Zola 'Colorful' Theme Demo"
 
+# using "docs" instead of "public" to allow for Github Pages hosting of the demo site (don't do this for your own site!)
+output_dir = "docs"
+
 compile_sass = true
 build_search_index = true
 minify_html = false
